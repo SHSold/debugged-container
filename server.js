@@ -1,10 +1,11 @@
+const build_place = process.env.BUILD_ON;
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function getData() {
-	const build_place = process.env.BUILD_ON;
-	return `Build on ${build_place}`
+	return `Build on ${build_place}`;
 }
 
 function getDate() {
@@ -16,6 +17,7 @@ async function main() {
     try  {
 		console.log(getData());
 		console.log(getDate());
+		console.log(`Build on ${build_place}`);
     }
     catch(e) {
       console.log(e);
