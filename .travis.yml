@@ -19,7 +19,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udacity-simple-node .
+  - docker build -t udacity-simple-node -build-arg BUILD_ON=${BUILD_ON} .
   - docker tag udacity-simple-node "$MY_DOCKER_HUB"/udacity-simple-node:latest
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
