@@ -3,7 +3,8 @@ function sleep(ms) {
 }
 
 function getData() {
-	return "This is the Date:"
+	const build_place = process.env.BUILD_ON;
+	return `Build on ${build_place}`
 }
 
 function getDate() {
